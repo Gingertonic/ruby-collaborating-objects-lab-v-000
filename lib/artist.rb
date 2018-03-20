@@ -28,6 +28,14 @@ class Artist
       end
   end
 
+  def self.find_by_name(artistname)
+    @@all.detect {|artist| artistname == artistname}
+  end
+
+  def create_by_name(artistname)
+    test_artist = Artist.new(artistname)
+  end
+
     def print_songs
       @songs.each {|song| puts song.name}
     end
