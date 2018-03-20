@@ -22,7 +22,8 @@ class Artist
   end
 
   def self.find_or_create_by_name(artistname)
-
+    # artist = self.find_by_name(artistname) ? self.find_by_name(artistname) : self.create_by_name(artistname)
+    artist = self.find_by_name(artistname) ? artist : self.create_by_name(artistname)
       # check = @@all.collect {|artist| artist.name}
       # if (!check.include?(artistname))
       #   Artist.new(artistname)
