@@ -11,10 +11,10 @@ class Song
 
   def self.new_by_filename(filename)
     splice = filename.split(/( - |\.)/)
-    binding.pry
     new_instance = Song.new(splice[2])
     new_artist = Artist.find_or_create_by_name(splice[0])
     new_instance.artist = new_artist
+    binding.pry
     new_artist.add_song(new_instance)
   end
 
