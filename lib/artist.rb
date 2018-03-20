@@ -34,6 +34,7 @@ class Artist
 
   def create_by_name(artistname)
     test_artist = Artist.new(artistname)
+    binding.pry
   end
 
     def print_songs
