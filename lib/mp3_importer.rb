@@ -8,7 +8,7 @@ class MP3Importer
   end
 
   def files
-    binding.pry
+    # binding.pry
     @files = Dir.entries(@path).reject{|entry| entry == "." || entry == ".."}
   end
 
