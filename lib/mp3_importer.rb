@@ -1,3 +1,5 @@
+require 'pry'
+
 class MP3Importer
   attr_accessor :path, :files
 
@@ -7,7 +9,10 @@ class MP3Importer
 
   def files
     @files = Dir.entries(@path).reject{|entry| entry == "." || entry == ".."}
+    binding.pry
   end
+
+  def print_files
 
   def import
     self.files
