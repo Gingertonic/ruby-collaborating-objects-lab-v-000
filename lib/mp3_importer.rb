@@ -8,8 +8,8 @@ class MP3Importer
   end
 
   def files
-    @files = Dir.entries(@path).reject{|entry| entry == "." || entry == ".."}
     binding.pry
+    @files = Dir.entries(@path).reject{|entry| entry == "." || entry == ".."}
   end
 
   def print_files
@@ -28,5 +28,5 @@ class MP3Importer
       # new_artist.add_song(new_instance)
     end
   end
-  
+
 end
