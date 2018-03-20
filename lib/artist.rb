@@ -6,7 +6,7 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
-    @@all << self
+    # @@all << self
   end
 
   def add_song(song)
@@ -22,18 +22,20 @@ class Artist
   end
 
   def self.find_or_create_by_name(artistname)
-      check = @@all.collect {|artist| artist.name}
-      if (!check.include?(artistname))
-        Artist.new(artistname)
-      end
+    
+      # check = @@all.collect {|artist| artist.name}
+      # if (!check.include?(artistname))
+      #   Artist.new(artistname)
+      # end
   end
 
   def self.find_by_name(artistname)
     @@all.detect {|artist| artistname == artistname}
   end
 
-  def create_by_name(artistname)
+  def self.create_by_name(artistname)
     test_artist = Artist.new(artistname)
+    test_artist.save
     binding.pry
   end
 
