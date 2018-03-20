@@ -13,6 +13,8 @@ class MP3Importer
   end
 
   def print_files
+    @files
+  end
 
   def import
     self.files
@@ -26,4 +28,5 @@ class MP3Importer
       # new_artist.add_song(new_instance)
     end
   end
+  
 end
