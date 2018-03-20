@@ -22,7 +22,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(artistname)
-    
+
       # check = @@all.collect {|artist| artist.name}
       # if (!check.include?(artistname))
       #   Artist.new(artistname)
@@ -36,7 +36,7 @@ class Artist
   def self.create_by_name(artistname)
     test_artist = Artist.new(artistname)
     test_artist.save
-    binding.pry
+    test_artist
   end
 
     def print_songs
