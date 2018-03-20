@@ -20,7 +20,6 @@ class MP3Importer
     self.files
     @files.each do |filename|
       Song.new_by_filename(filename)
-      binding.pry
     end
   end
       # splice = filename.split(/( - |\.)/) #=> ["artist", " - ", "title", " - ", "genre", ".", "mp3"]
