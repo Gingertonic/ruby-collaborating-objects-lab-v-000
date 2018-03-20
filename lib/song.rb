@@ -13,7 +13,7 @@ class Song
     splice = filename.split(/( - |\.)/)
     new_instance = Song.new(splice[2])
     new_instance.artist = splice[0]
-    new_artist = Artist.find_or_create_by_name(new_instance.artist)
+    new_artist = Artist.find_or_create_by_name(splice[0])
     new_artist.add_song(new_instance)
   end
 
